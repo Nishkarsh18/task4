@@ -1,0 +1,25 @@
+body
+{
+background-color:black;
+color:white;
+font-size:30px;
+text-shadow: 15px 15px 15px #fff;
+}
+p
+{
+font-size:30px;
+font-weight:bold;
+color:white;
+text-shadow: 15px 15px 15px #fff;
+}
+input
+{
+font-size:20px;
+font-weight:bold;
+margin-left:680px;
+text-shadow: 15px 15px 15px #fff;
+height:60px;
+width:100px;
+border:10px groove white;
+border-radius:15px;
+}

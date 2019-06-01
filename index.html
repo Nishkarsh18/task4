@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Task</title>
+<link rel="stylesheet" type="text/css" href="nis2.css"/>
+</head>
+<body>
+<h1>Click on button to get a detail.</h1>
+<p id="new"></p>
+<input type="button" value="submit" onclick="action()">
+<script>
+function action()
+{
+var xhttp=new XMLHttpRequest();
+xhttp.open("GET","https://anapioficeandfire.com/api/characters/583",true);
+xhttp.onload=function()
+{
+if(this.readyState==4 && this.status==200)
+{
+var text=JSON.parse(this.responseText);
+document.getElementById("new").innerHTML="Name:       "+text.name+'</br>'+'Gender:'+text.gender+'</br>'+'Title:'+text.titles+'</br>'+'PlayedBy:'+text.playedBy;
+}
+};
+xhttp.send();
+}
+</script>
+</body>
+</html>
